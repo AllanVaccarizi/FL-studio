@@ -1,0 +1,90 @@
+#mainHeader{
+    @include fixed(top);
+    background-color: color("blue");
+    height: $headerHeight;
+    padding: space(2);
+    @include display-grid();
+    grid-template-columns: 80px 2fr 1fr 100px;
+    #logo{
+        img{
+            max-height: calc(#{$headerHeight} - #{space(1) * 2});
+        }//Fin #mainHeader #logo img
+    }//Fin #mainHeader #logo
+    #mainNav{
+        ul{
+        @include reset("list");
+        display: none;
+        position: absolute;
+        top: $headerHeight;
+        padding: space(2);
+        width: 100%;
+        li a{
+            @include reset("link");
+            padding: space(2);
+            color: color("white");
+            font-family: Teko;
+            font-size: font-size("lg");
+            display: block;
+            &:hover{
+                color: color("yellow");
+                }//Fin  #mainHeader #mainNav li a hover
+            }//Fin #mainHeader #mainNav ul li a
+         }//Fin #mainHeader #mainNav ul
+    }//Fin #mainHeader #mainNav
+    .socials{
+        ul{
+            @include reset("list");
+            display:none;
+            position: absolute;
+            top: $headerHeight;
+            right: 0;
+            padding: space(1);
+            background-color: color("blue");
+            li a img{
+                max-height: calc(#{$headerHeight} - #{space(3) * 2});
+                padding: space(2);
+                display: block;
+            }//Fin #mainHeader #socials ul li img
+        }//Fin #mainHeader #socials ul
+    }//Fin #mainHeader #socials
+    #menuToggle{
+        margin: auto;
+        button{
+           @extend .btn;
+           @extend .btn-white;
+        }//Fin #mainHeader #menuToogle img
+    }//Fin #mainHeader #menuToogle
+
+    //responsice MD and up
+    @include media-breakpoint-up("lg"){
+        grid-template-columns: 80px 5fr 1fr;
+        #menuToggle{
+            display: none;
+        }
+        #mainNav{
+            margin: auto;
+            ul{
+                display: flex !important;
+                position: static;
+                padding: 0;
+                li a{
+                    font-size: font-size("xxl");
+                }
+            }
+        }
+        .socials {
+            margin: auto;
+            ul{
+                display: flex !important;
+                position: static;
+                padding: 0;
+            }
+            li a img{
+                &:hover{
+                    max-height: 45px;
+                    max-width: 60px;
+                }
+            }
+        }
+    };
+}

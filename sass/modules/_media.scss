@@ -1,0 +1,51 @@
+#mainContent{
+    #screenshots, #artwork{
+        padding: space();
+    }
+    h1{
+        @include reset("heading");
+        font-size: font-size("xxl");
+        text-align: center;
+        margin-top: space();
+        margin-bottom: space(1);
+    }//Fin #mainContent h1
+    h2{
+        @include reset("heading");
+        font-size: font-size("xl");
+        margin-top: space();
+        margin-bottom: space();
+        color: color("yellow");
+    }
+    h3{
+        @include reset("heading");
+        padding-left: space();
+    }
+    #screenshots article,#artwork article{
+        margin-bottom: space(4);
+    }
+
+
+    //Reponsive lg et xl
+    @include media-breakpoint-up("lg"){
+        #screenshots article,#artwork article{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            p{
+                padding: space();
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        #screenshots .screenshotsArticles,#artwork .artworkArticles{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: space();
+        }
+    }
+    @include media-breakpoint-up("xl"){
+        #about article{
+            padding: space(5);
+        }
+    }
+}

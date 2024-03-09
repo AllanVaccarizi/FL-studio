@@ -1,0 +1,21 @@
+//Import external librairies and Google fonts
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teko:wght@300..700&display=swap');
+
+//import utils
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/variables";
+
+//import classes
+@import "classes/accessibility";
+@import "classes/buttons";
+
+//import modules
+@import "modules/mainContent";
+@import "modules/mainFooter";
+@import "modules/mainHeader";
+@import "modules/home";
+@import "modules/media";
+@import "modules/form";
+@import "modules/endForm"

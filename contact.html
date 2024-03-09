@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FL Studio | Contact</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div id="logo">
+            <img src="/images/logoSonic.svg" alt="Logo Jeu">
+        </div>
+        <nav id="mainNav">
+            <!--Barre de navigation-->
+            <h2 class="accessibility">Page de contact</h2>
+            <p class="accessibility"><a href="#mainContent" tittle="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+            <ul class="collapsed">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Demo</a></li>
+                <li><a href="#">Kickstarter</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="media.html">Media</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="socials">
+            <!--Réseaux sociaux-->
+            <ul class="collapsed">
+                <li><a href="#"><img src="/images/youTube.svg"></a></li>
+                <li><a href="#"><img src="/images/x.svg"></a></li>
+                <li><a href="#"><img src="/images/tiktok.svg"></a></li>
+                <li><a href="#"><img src="/images/steam.svg"></a></li>
+                <li><a href="#"><img src="/images/discord.svg"></a></li>
+            </ul>
+        </nav>
+        <div id="menuToggle">
+            <!--Menu de navigation petits écrans-->
+            <button><img src="/images/hamburger.svg" alt="Menu Toggle"></button>
+        </div>
+    </header>
+    <!--Fin du #mainHeader-->
+    <main id="mainContent">
+        <h1>Contactez-nous</h1>
+        <h2>Si vous souhaitez nous contactez ou nous faire un retour merci de remplir le formulaire suivant :</h2>
+        <form id="frmContact" action="finContact.html">
+            <div class="form">
+                <div>
+                    <label>Nom complet <span class="required" alt="Recquis">*</span></label>
+                    <input type="text" id="fname" name="fname" class="field-divided" placeholder="Prénom" required autofocus>
+                    <input type="text" id="lname" name="lname" class="field-divided" placeholder="Nom">
+                    <!--Fin Nom complet-->
+                    <label>Adresse mail <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="exemple@exemple.com" class="field-long" required>
+                    <!--Fin adresse mail-->
+                </div>
+                <div>
+                    <label>Votre message <span class="required">*</span></label>
+                    <textarea id="message" name="message" class="field-long field-textarea" placeholder="Votre message"></textarea>
+                </div>
+            </div>
+            <div>
+                <div id="file">
+                    <label>Ajouter un document</label>
+                    <input type="file" id="file" name="file">
+                </div>
+                <div id="submitButton">
+                <input id="submit" type="submit" value="Envoyer">
+                </div>
+            </div>
+            <p><span class="required">*</span> Champs obligatoire</p>
+        </form>
+    </main>
+    <footer id="mainFooter">
+        <img src="images/logoSonic.svg">
+        <div>
+            <h3>Retrouvez nous sur :</h3>
+            <nav class="socials">
+                <!--Réseaux sociaux-->
+                <ul>
+                    <li><a href="#"><img src="/images/youtube.svg"></a></li>
+                    <li><a href="#"><img src="/images/x.svg"></a></li>
+                    <li><a href="#"><img src="/images/tiktok.svg"></a></li>
+                    <li><a href="#"><img src="/images/steam.svg"></a></li>
+                    <li><a href="#"><img src="/images/discord.svg"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>

@@ -1,0 +1,66 @@
+#mainContent>h2{
+    padding: space();
+}
+#frmContact{
+    .required{
+        color: red;
+    }
+    #submitButton {
+        position: static;
+        margin: 10px;
+        #submit{
+            padding: space();
+            font-family: $body-font;
+            border: none;
+            color: color("white");
+            @include border-radius();
+            @extend .btn;
+            @extend .btn-pink;
+            @include center();
+        }
+    }
+    p{
+        text-align: center;
+    }
+    #file{
+        @include center();
+        text-align: center;
+    }
+    .form{
+        margin: space() auto;
+        padding: space();
+        font-family: $body-font;
+        li{
+            padding:0;
+            display: block;
+            margin: space() 0 0 0;
+        }
+        label{
+            margin: 0 0 space(1) 0;
+            padding: 0;
+            display: block;
+            font-weight: bold;
+        }
+        .field-divided{
+            width: 49%;
+        }
+        .field-long{
+            width: 99%;
+        }
+        .field-textarea{
+            height: 100px;
+            resize: none;
+        }
+
+    //Responsive
+    @include media-breakpoint-up("lg"){
+        @include display-grid;
+        grid-template-columns: 1fr 1fr;
+        .field-textarea{
+            height: 100%;
+            resize: none;
+        }
+    }
+    }
+}
+

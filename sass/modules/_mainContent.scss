@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: $body-font;
+    font-size: 1rem;
+    color: color("white");
+    @include reset();
+    background-color: color("grey");
+    padding-top: $headerHeight;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: $title-font;
+}
+
+//Images responsive
+@if ($make-images-responsive){
+    img{
+        @extend .responsive;
+    }
+}
+
+h1{
+    @include reset("heading");
+    font-size: font-size("xxl");
+    text-align: center;
+    margin-top: space();
+    margin-bottom: space(1);
+ }
+h2{
+    @include reset("heading");
+    font-size: font-size("xl");
+    margin-top: space();
+    margin-bottom: space();
+    color: color("yellow");
+}

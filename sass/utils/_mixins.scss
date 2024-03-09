@@ -1,0 +1,70 @@
+//reset mixin
+@mixin reset($type: ""){
+    padding: 0;
+    margin: 0;
+    @if $type == "list"{
+        list-style-type: none;
+    }
+    @if $type == "link"{
+        text-decoration: none;
+    }
+    @if $type == "heading"{
+        font-weight: normal;
+        font-size: $default-font-size;
+    }
+}
+
+//display-grid mixin
+@mixin display-grid{
+    display: -ms-grid;
+    display: grid;
+}
+
+//fixed mixin
+@mixin fixed($position) {
+    position: fixed;
+    #{$position} : 0;
+    width : 100%;
+    z-index : 10000;
+};
+
+//boder-radius mixin
+@mixin border-radius($type : "all", $radius: $defaultRadius){
+    @if($type == "top"){
+        border-radius : $radius $radius 0 0;
+    }
+    @if($type == "left"){
+        border-radius : $radius 0 0 $radius;
+    }
+    @if($type == "bottom"){
+        border-radius : 0 0 $radius $radius;
+    }
+    @if($type == "right"){
+        border-radius : 0 $radius $radius 0;
+    }
+    @if($type == "circle"){
+        border-radius : 50%;
+    }
+    @else{
+        border-radius: $radius;
+    }
+}
+
+//center
+@mixin center(){
+    display: block;
+    margin: 0 auto;
+}
+
+//breakpoint
+@mixin media-breakpoint-up($name){
+    @media screen and (min-width : map-get($breakpoints, $name)){
+        @content
+    }
+};
+
+@mixin media-breakpoint-down($name){
+    @media screen and (max-width : map-get($breakpoints, $name)){
+        @content
+    }
+}

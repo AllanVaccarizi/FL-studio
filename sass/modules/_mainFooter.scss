@@ -1,0 +1,60 @@
+#mainFooter{
+    padding-top: space();
+    background-color: color("blue");
+    color: color("white");
+    clear: both;
+    height: $footerHeight;
+    width: 100%;
+    //Fin #mainFooter div.row
+    h3{
+        background-color: color("blue");
+        @include reset("heading")
+    }
+    img{
+        background-color: color("blue") ;
+        height: 500px !important; 
+    }
+    h3{
+        text-align: center;
+    }
+    .socials {
+        @include center(); 
+            ul{
+            @include reset("list");
+            top: $headerHeight;
+            padding: space(1);
+            background-color: color("blue");
+            float: right;
+            bottom: $footerHeight;
+            display: flex;
+            li a {
+                @include reset("link",);
+                @include center();
+                color: color("white");
+                padding: space();
+                p{
+                    text-align: center;
+                }
+                img{
+                    @include reset("link",);
+                    padding: space(2);
+                    height: 150px;
+                }//Fin #mainHeader #socials ul li img
+            }
+        //Fin #mainHeader #socials ul
+        }
+    }
+    //Responsive
+    }
+    @include media-breakpoint-up("lg"){
+        @include display-grid;
+        grid-template-columns: 320px 1fr;
+        #logoFooter img{
+            width: 320px;
+            height: 320px;
+            min-width: 320px;
+            max-height: 320px;
+        }
+}//Fin #mainFooter
+
+

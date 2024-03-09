@@ -1,0 +1,18 @@
+#mainContent{
+    a{
+        @include reset("link");
+        width: 200px;
+        padding: space();
+        font-family: $body-font;
+        border: none;
+        color: color("white");
+        @include border-radius();
+        @extend .btn;
+        @extend .btn-pink;
+        @include center();
+        margin: 200px auto;
+    }
+    #endForm{
+        height: 500px;
+    }
+}
