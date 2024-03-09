@@ -14,7 +14,7 @@ Nom : Choquer
 Prénom : Loris
 Fonction : Co-fondateur
 Adresse mail : lorischoquer@gmail.com
-
+≈
 
 #### Mandataire : 
 
