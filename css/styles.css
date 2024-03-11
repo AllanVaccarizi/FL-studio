@@ -108,6 +108,7 @@ h2 {
   background-color: rgb(40, 34, 49);
   color: rgb(255, 255, 255);
   clear: both;
+  bottom: 0;
   width: 100%;
 }
 #mainFooter h3 {
@@ -122,6 +123,11 @@ h2 {
 }
 #mainFooter h3 {
   text-align: center;
+}
+#mainFooter .socials{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #mainFooter .socials ul {
   float: right;
@@ -150,6 +156,7 @@ h2 {
   text-decoration: none;
   padding: 0.5rem;
   height: 150px;
+  min-width: 30px;
 }
 @media (min-width: 360px) {
   #mainFooter #logoFooter img {
@@ -414,7 +421,9 @@ h2 {
 #mainContent > h2 {
   padding: 1rem;
 }
-
+#mainContent.form{
+  margin-bottom: 19%;
+}
 #frmContact .required {
   color: red;
 }
