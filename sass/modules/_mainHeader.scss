@@ -3,7 +3,7 @@
     background-color: color("blue");
     height: $headerHeight;
     padding: space(2);
-    @include display-grid();
+    display: grid;
     grid-template-columns: 80px 2fr 1fr 100px;
     #logo{
         img{

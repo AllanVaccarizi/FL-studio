@@ -1,5 +1,4 @@
 #mainFooter{
-    padding-top: space();
     background-color: color("blue");
     color: color("white");
     clear: both;
@@ -12,6 +11,8 @@
     img{
         background-color: color("blue") ;
         height: 500px !important; 
+        display: block;
+        margin: 0 auto;
     }
     h3{
         text-align: center;
@@ -27,24 +28,22 @@
             li a {
                 @include reset("link",);
                 @include center();
-                color: color("white");
                 padding: space();
                 p{
                     text-align: center;
                 }
                 img{
-                    @include reset("link",);
                     padding: space(2);
                     height: 150px;
+                    max-height: 400px;
                 }//Fin #mainHeader #socials ul li img
             }
         //Fin #mainHeader #socials ul
         }
     }
     //Responsive
-    }
     @include media-breakpoint-up("lg"){
-        @include display-grid;
+        display: grid;
         grid-template-columns: 320px 1fr;
         #logoFooter img{
             width: 320px;
@@ -52,6 +51,7 @@
             min-width: 320px;
             max-height: 320px;
         }
+    }
 }//Fin #mainFooter
 
 

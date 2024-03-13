@@ -54,7 +54,7 @@
 
     //Responsive
     @include media-breakpoint-up("lg"){
-        @include display-grid;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         .field-textarea{
             height: 100%;
