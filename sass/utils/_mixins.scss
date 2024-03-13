@@ -15,10 +15,6 @@
 }
 
 //display-grid mixin
-@mixin display-grid{
-    display: -ms-grid;
-    display: grid;
-}
 
 //fixed mixin
 @mixin fixed($position) {

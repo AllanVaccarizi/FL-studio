@@ -3,7 +3,6 @@
     background-color: color("blue");
     color: color("white");
     clear: both;
-    height: $footerHeight;
     width: 100%;
     //Fin #mainFooter div.row
     h3{
@@ -18,15 +17,13 @@
         text-align: center;
     }
     .socials {
-        @include center(); 
-            ul{
+        ul{
             @include reset("list");
-            top: $headerHeight;
             padding: space(1);
             background-color: color("blue");
-            float: right;
-            bottom: $footerHeight;
             display: flex;
+            justify-content: center;
+            align-items: center;
             li a {
                 @include reset("link",);
                 @include center();
