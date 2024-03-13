@@ -49,3 +49,28 @@
         }
     }
 }
+#mediaContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10000;
+}
+#mediaContainer img{
+    border: solid 5px;
+    max-height: 80%;
+    width: auto;
+}
+#mediaContainer.visible{
+    opacity: 1;
+    visibility: visible;
+}
