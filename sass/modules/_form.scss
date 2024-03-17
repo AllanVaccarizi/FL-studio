@@ -8,7 +8,7 @@
     #submitButton {
         position: static;
         margin: 10px;
-        #submit{
+        #btnSubmit{
             padding: space();
             font-family: $body-font;
             border: none;
@@ -17,12 +17,13 @@
             @extend .btn;
             @extend .btn-pink;
             @include center();
+            cursor: pointer;
         }
     }
     p{
         text-align: center;
     }
-    #file{
+    #file, #files{
         @include center();
         text-align: center;
     }

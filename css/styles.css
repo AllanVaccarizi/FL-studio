@@ -5,7 +5,7 @@
   left: -15000px;
 }
 
-.btn, #mainContent a, #frmContact #submitButton #submit, #mainContent.home #about a, #mainContent.home #features a, #mainHeader #menuToggle button {
+.btn, #mainContent a, #frmContact #submitButton #btnSubmit, #mainContent.home #about a, #mainContent.home #features a {
   display: inline-flex;
   flex-direction: row;
   justify-content: center;
@@ -16,10 +16,10 @@
   padding: 0.5rem;
 }
 
-.btn-pink, #mainContent a, #frmContact #submitButton #submit, #mainContent.home #about a, #mainContent.home #features a {
+.btn-pink, #mainContent a, #frmContact #submitButton #btnSubmit, #mainContent.home #about a, #mainContent.home #features a {
   background-color: rgb(171, 106, 103);
 }
-.btn-pink:hover, #mainContent a:hover, #frmContact #submitButton #submit:hover, #mainContent.home #about a:hover, #mainContent.home #features a:hover {
+.btn-pink:hover, #mainContent a:hover, #frmContact #submitButton #btnSubmit:hover, #mainContent.home #about a:hover, #mainContent.home #features a:hover {
   background-color: rgba(171, 106, 103, 0.5);
 }
 
@@ -44,10 +44,10 @@
   background-color: rgba(165, 140, 27, 0.5);
 }
 
-.btn-white, #mainHeader #menuToggle button {
+.btn-white {
   background-color: rgb(255, 255, 255);
 }
-.btn-white:hover, #mainHeader #menuToggle button:hover {
+.btn-white:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -177,53 +177,51 @@ h2 {
 #mainHeader #logo img {
   max-height: calc(68px - 0.5rem);
 }
-#mainHeader #mainNav ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: none;
-  position: absolute;
-  top: 68px;
-  padding: 1rem;
-  width: 100%;
-}
-#mainHeader #mainNav ul li a {
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  padding: 0.5rem;
-  color: rgb(255, 255, 255);
-  font-family: Teko;
-  font-size: 1.3rem;
-  display: block;
-}
-#mainHeader #mainNav ul li a:hover {
-  color: rgb(165, 140, 27);
-}
 #mainHeader .socials ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
   display: none;
-  position: absolute;
-  top: 68px;
-  right: 0;
-  padding: 0.25rem;
-  background-color: rgb(40, 34, 49);
-}
-#mainHeader .socials ul li a img {
-  max-height: calc(68px - 2rem);
-  padding: 0.5rem;
-  display: block;
-}
-#mainHeader #menuToggle {
-  margin: auto;
 }
 @media screen and (min-width: 992px) {
   #mainHeader {
     grid-template-columns: 80px 5fr 1fr;
   }
-  #mainHeader #menuToggle {
+  #mainHeader #mainNav ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 68px;
+    padding: 1rem;
+    width: 100%;
+  }
+  #mainHeader #mainNav ul li a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    font-family: Teko;
+    font-size: 1.3rem;
+    display: block;
+  }
+  #mainHeader #mainNav ul li a:hover {
+    color: rgb(165, 140, 27);
+  }
+  #mainHeader .socials ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    padding: 0.25rem;
+    background-color: rgb(40, 34, 49);
+  }
+  #mainHeader .socials ul li a img {
+    max-height: calc(68px - 2rem);
+    padding: 0.5rem;
+    display: block;
+  }
+  #mainHeader #burger-menu {
     display: none;
   }
   #mainHeader #mainNav {
@@ -349,6 +347,9 @@ h2 {
 #mainContent #screenshots, #mainContent #artwork {
   padding: 1rem;
 }
+#mainContent #screenshots img, #mainContent #artwork img {
+  cursor: pointer;
+}
 #mainContent h1 {
   padding: 0;
   margin: 0;
@@ -441,7 +442,7 @@ h2 {
   position: static;
   margin: 10px;
 }
-#frmContact #submitButton #submit {
+#frmContact #submitButton #btnSubmit {
   padding: 1rem;
   font-family: "Open Sans", Roboto, Verdana, sans-serif;
   border: none;
@@ -449,11 +450,12 @@ h2 {
   border-radius: 5px;
   display: block;
   margin: 0 auto;
+  cursor: pointer;
 }
 #frmContact p {
   text-align: center;
 }
-#frmContact #file {
+#frmContact #file, #frmContact #files {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -511,4 +513,96 @@ h2 {
 }
 #mainContent #endForm {
   height: 1000px;
+}
+
+@media screen and (max-width: 992px) {
+  #mainHeader {
+    grid-template-columns: 80px 2fr 100px;
+  }
+  #mainHeader #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    margin: 20px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+  }
+  #mainHeader #burger-menu span,
+  #mainHeader #burger-menu span:before,
+  #mainHeader #burger-menu span:after {
+    background: #fff;
+    display: block;
+    height: 4px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #mainHeader #burger-menu span:before,
+  #mainHeader #burger-menu span:after {
+    content: "";
+  }
+  #mainHeader #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+  #mainHeader #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 16px;
+  }
+  #mainHeader #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 20px;
+  }
+  #mainHeader #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+  #mainHeader #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #mainHeader #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+  #mainHeader #mainNav {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  #mainHeader #mainNav.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgb(40, 34, 49);
+  }
+  #mainHeader #mainNav.overlay ul {
+    padding-left: 0;
+  }
+  #mainHeader #mainNav li {
+    list-style: none;
+  }
+  #mainHeader #mainNav a {
+    color: #fff;
+    display: block;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-decoration: none;
+  }
 }/*# sourceMappingURL=styles.css.map */

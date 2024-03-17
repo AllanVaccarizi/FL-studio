@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FL Studio | Contact</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/menu.js" defer></script>
 </head>
 <body>
     <header id="mainHeader">
@@ -34,16 +35,15 @@
                 <li><a href="#"><img src="/images/discord.svg"></a></li>
             </ul>
         </nav>
-        <div id="menuToggle">
-            <!--Menu de navigation petits écrans-->
-            <button><img src="/images/hamburger.svg" alt="Menu Toggle"></button>
+        <div id="burger-menu">
+            <span></span>
         </div>
     </header>
     <!--Fin du #mainHeader-->
     <main id="mainContent" class="form">
         <h1>Contactez-nous</h1>
         <h2>Si vous souhaitez nous contactez ou nous faire un retour merci de remplir le formulaire suivant :</h2>
-        <form id="frmContact" action="finContact.html">
+        <form id="frmContact" action="finContact.html" novalidate>
             <div class="form">
                 <div>
                     <label>Nom complet <span class="required" alt="Recquis">*</span></label>
@@ -60,12 +60,12 @@
                 </div>
             </div>
             <div>
-                <div id="file">
+                <div id="files">
                     <label>Ajouter un document</label>
                     <input type="file" id="file" name="file">
                 </div>
                 <div id="submitButton">
-                <input id="submit" type="submit" value="Envoyer">
+                <input id="btnSubmit" type="submit" value="Envoyer">
                 </div>
             </div>
             <p><span class="required">*</span> Champs obligatoire</p>

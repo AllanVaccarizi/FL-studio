@@ -2,6 +2,9 @@
     #screenshots, #artwork{
         padding: space();
     }
+    #screenshots img, #artwork img{
+        cursor: pointer;
+    }
     h1{
         @include reset("heading");
         font-size: font-size("xxl");
